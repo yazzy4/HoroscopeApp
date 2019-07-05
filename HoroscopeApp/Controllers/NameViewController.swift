@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NameViewController: UIViewController {
 
+    let nameView = NameView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("hello")
+        view.addSubview(NameView)
     }
 
 

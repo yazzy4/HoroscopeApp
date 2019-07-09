@@ -8,11 +8,23 @@
 
 import UIKit
 
+protocol MainViewDelegate: AnyObject {
+    func typedMessage()
+    func seguePressed()
+}
+
 class NameView: UIView {
+    
+    weak var delegate: MainViewDelegate?
+
     
     public lazy var instructionLabel: UILabel = {
         let label = UILabel()
         label.text = "Enter First And Last Name"
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.font = UIFont(name: "Helvetica-Bold", size: 30)
+        label.textAlignment = .center
+        label.numberOfLines = 3
         return label
     }()
 
@@ -29,7 +41,7 @@ class NameView: UIView {
     
     public lazy var lastName: UITextView = {
         let text = UITextView()
-        text.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        text.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         text.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         text.text = "Last Name"
         text.layer.cornerRadius = 10
@@ -37,6 +49,19 @@ class NameView: UIView {
         return text
         
     }()
+    
+    public lazy var submitButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Submit", for: .normal)
+        button.backgroundColor = .black
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(submitButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func submitButtonPressed(){
+        delegate?.seguePressed()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -50,8 +75,10 @@ class NameView: UIView {
     }
     
     func commonInit() {
-       setupFirstName()
+        setupFirstName()
         setupLastName()
+        setupInstructionLabel()
+        setupSubmitButton()
     }
     
     func setupFirstName() {
@@ -70,6 +97,26 @@ class NameView: UIView {
         lastName.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 15).isActive = true
         lastName.heightAnchor.constraint(equalTo: firstName.heightAnchor).isActive = true
         lastName.widthAnchor.constraint(equalTo: firstName.widthAnchor).isActive = true
+    }
+    
+    func setupInstructionLabel(){
+        addSubview(instructionLabel)
+        instructionLabel.translatesAutoresizingMaskIntoConstraints = false
+        instructionLabel.bottomAnchor.constraint(equalTo: firstName.topAnchor, constant: -30).isActive = true
+        instructionLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        instructionLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        instructionLabel.widthAnchor.constraint(equalTo: firstName.widthAnchor).isActive = true
+        instructionLabel.heightAnchor.constraint(equalTo: firstName.heightAnchor, constant: 50).isActive = true
+    }
+    
+    func setupSubmitButton(){
+        addSubview(submitButton)
+        submitButton.translatesAutoresizingMaskIntoConstraints = false
+        submitButton.topAnchor.constraint(equalTo: lastName.bottomAnchor).isActive = true
+        submitButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 80).isActive = true
+        submitButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        submitButton.heightAnchor.constraint(equalTo: lastName.heightAnchor).isActive = true
+        submitButton.widthAnchor.constraint(equalTo: lastName.widthAnchor).isActive = true
     }
     
     

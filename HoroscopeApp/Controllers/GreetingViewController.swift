@@ -19,5 +19,14 @@ class GreetingViewController: UIViewController {
     
     }
     
+//    init (message: String) {
+//        super.init(nibName: nil, bundle: nil)
+//        greetingView.greetingLabel.text = message
+//    }
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+
+    
 
 }

@@ -9,10 +9,12 @@
 import UIKit
 
 class GreetingView: UIView {
+    
+    let astro: AstroSign? = nil
 
     lazy var greetingLabel: UILabel = {
         let label = UILabel()
-        label.text = "Welcome First and Last name, your sign is: "
+        label.text = "Welcome \(astro?.fullName ?? "error"), your sign is: "
         label.font = UIFont(name: "Helvetica-Bold", size: 30)
         label.backgroundColor = .black
         label.textColor = .white
@@ -23,7 +25,7 @@ class GreetingView: UIView {
     
     lazy var zodiacResult: UILabel = {
         let label = UILabel()
-        label.text = "Zodiac sign"
+        //label.text = "Zodiac sign"
         label.font = UIFont(name: "Helvetica-Bold", size: 30)
         label.backgroundColor = .black
         label.textColor = .white

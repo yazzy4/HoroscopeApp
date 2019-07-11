@@ -9,14 +9,14 @@
 import UIKit
 
 protocol MainViewDelegate: AnyObject {
-    func typedMessage()
+    func typedMessage(firstName: String, lastName: String)
     func seguePressed()
 }
 
 class NameView: UIView {
     
     weak var delegate: MainViewDelegate?
-
+     
     
     public lazy var instructionLabel: UILabel = {
         let label = UILabel()
@@ -28,22 +28,22 @@ class NameView: UIView {
         return label
     }()
 
-    public lazy var firstName: UITextView = {
-        let text = UITextView()
+    public lazy var firstName: UITextField = {
+        let text = UITextField()
         text.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         text.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        text.text = "First Name"
+        text.placeholder = "First Name"
         text.layer.cornerRadius = 10
         text.layer.masksToBounds = true
         return text
         
     }()
     
-    public lazy var lastName: UITextView = {
-        let text = UITextView()
+    public lazy var lastName: UITextField = {
+        let text = UITextField()
         text.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         text.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        text.text = "Last Name"
+        text.placeholder = "Last Name"
         text.layer.cornerRadius = 10
         text.layer.masksToBounds = true
         return text

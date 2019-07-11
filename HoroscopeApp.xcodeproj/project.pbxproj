@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911357F922D79A9500996A98 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911357F822D79A9500996A98 /* UIViewController+Alert.swift */; };
 		911B78D522CD52F300659965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B78D422CD52F300659965 /* AppDelegate.swift */; };
 		911B78D722CD52F300659965 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B78D622CD52F300659965 /* NameViewController.swift */; };
 		911B78DA22CD52F300659965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911B78D822CD52F300659965 /* Main.storyboard */; };
@@ -14,7 +15,7 @@
 		911B78DF22CD52F700659965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911B78DD22CD52F700659965 /* LaunchScreen.storyboard */; };
 		911B78EA22CD52F700659965 /* HoroscopeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B78E922CD52F700659965 /* HoroscopeAppTests.swift */; };
 		911B78F522CD52F700659965 /* HoroscopeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B78F422CD52F700659965 /* HoroscopeAppUITests.swift */; };
-		911B790322CFAC1300659965 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B790222CFAC1300659965 /* User.swift */; };
+		911B790322CFAC1300659965 /* AstroSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B790222CFAC1300659965 /* AstroSign.swift */; };
 		911B790822CFB06200659965 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B790722CFB06200659965 /* NameView.swift */; };
 		911B790A22CFB07500659965 /* BirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B790922CFB07500659965 /* BirthdayView.swift */; };
 		911B790C22CFB0A400659965 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B790B22CFB0A400659965 /* GreetingView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		911357F822D79A9500996A98 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		911B78D122CD52F300659965 /* HoroscopeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoroscopeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911B78D422CD52F300659965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		911B78D622CD52F300659965 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		911B78F022CD52F700659965 /* HoroscopeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoroscopeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		911B78F422CD52F700659965 /* HoroscopeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeAppUITests.swift; sourceTree = "<group>"; };
 		911B78F622CD52F700659965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		911B790222CFAC1300659965 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		911B790222CFAC1300659965 /* AstroSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstroSign.swift; sourceTree = "<group>"; };
 		911B790722CFB06200659965 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		911B790922CFB07500659965 /* BirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayView.swift; sourceTree = "<group>"; };
 		911B790B22CFB0A400659965 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 		911B790422CFAC2E00659965 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				911B790222CFAC1300659965 /* User.swift */,
+				911B790222CFAC1300659965 /* AstroSign.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				911B78D622CD52F300659965 /* NameViewController.swift */,
+				911357F822D79A9500996A98 /* UIViewController+Alert.swift */,
 				911B790D22CFB4F600659965 /* BirthdayViewController.swift */,
 				911B790F22CFB50900659965 /* GreetingViewController.swift */,
 			);
@@ -298,13 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911357F922D79A9500996A98 /* UIViewController+Alert.swift in Sources */,
 				911B790A22CFB07500659965 /* BirthdayView.swift in Sources */,
 				911B790C22CFB0A400659965 /* GreetingView.swift in Sources */,
 				911B78D722CD52F300659965 /* NameViewController.swift in Sources */,
 				911B791022CFB50900659965 /* GreetingViewController.swift in Sources */,
 				911B790822CFB06200659965 /* NameView.swift in Sources */,
 				911B78D522CD52F300659965 /* AppDelegate.swift in Sources */,
-				911B790322CFAC1300659965 /* User.swift in Sources */,
+				911B790322CFAC1300659965 /* AstroSign.swift in Sources */,
 				911B790E22CFB4F600659965 /* BirthdayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

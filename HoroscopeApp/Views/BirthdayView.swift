@@ -30,12 +30,18 @@ class BirthdayView: UIView {
 
     lazy var birthdatePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
+        let dateFormatter = DateFormatter()
+        
         datePicker.datePickerMode = .date
-       // datePicker.minimumDate = NSCalendar.current.date(byAdding: .year, value: 0, to: today)
-        datePicker.datePickerMode = .date
-        datePicker.date = Date()
+        
+        
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         return datePicker
+    }()
+    
+    lazy var picker: UIPickerView = {
+        let picker = UIPickerView()
+        return picker
     }()
     
     lazy var submitButton: UIButton = {

@@ -20,7 +20,7 @@ class BirthdayViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(birthdayView)
         birthdayView.delegate = self
-        view.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         
     }

@@ -22,7 +22,7 @@ class NameViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(nameView)
         nameView.delegate = self
-        view.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
     }
     

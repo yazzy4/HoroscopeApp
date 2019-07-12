@@ -18,9 +18,9 @@ class GreetingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(greetingView)
-        view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.astro = AstroSign(fullName: fullName)
-        greetingView.greetingLabel.text = "Welcome \(fullName)"
+        greetingView.greetingLabel.text = "Welcome \(fullName), your sign is:"
         
         
         displayZodiacSign()
@@ -32,6 +32,7 @@ class GreetingViewController: UIViewController {
             for(sign, interval) in astro.dict {
                 let dateFormatter = DateFormatter()
                 //not the best format
+                //takes date, returns string, turns back into date
                 dateFormatter.dateFormat = "MMM d"
                 let formattedBDayStr = dateFormatter.string(from: birthday)
                 let formattedBDayDate = dateFormatter.date(from: formattedBDayStr)

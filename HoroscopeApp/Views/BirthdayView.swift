@@ -48,7 +48,8 @@ class BirthdayView: UIView {
         let button = UIButton()
         button.setTitle("Submit", for: .normal)
         button.addTarget(self, action: #selector(submitButtonPressed), for: .touchUpInside)
-        button.backgroundColor = .black
+        button.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        button.layer.cornerRadius = 10
         return button
     }()
     

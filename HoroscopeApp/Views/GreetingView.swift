@@ -25,7 +25,7 @@ class GreetingView: UIView {
     
     lazy var zodiacResult: UILabel = {
         let label = UILabel()
-        //label.text = "Zodiac sign"
+        label.text = "Zodiac sign"
         label.font = UIFont(name: "Helvetica-Bold", size: 30)
         label.backgroundColor = .black
         label.textColor = .white
